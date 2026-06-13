@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Merub 🤍</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV DOTS -->
+  <nav id="session-nav">
+    <span class="dot active" data-index="0" title="Home"></span>
+    <span class="dot" data-index="1" title="Us"></span>
+    <span class="dot" data-index="2" title="Songs"></span>
+    <span class="dot" data-index="3" title="Radio"></span>
+    <span class="dot" data-index="4" title="Cake"></span>
+  </nav>
+
+  <!-- SESSIONS WRAPPER -->
+  <div id="app">
+
+    <!-- SESSION 0: HERO -->
+    <section class="session active" id="s0-hero">
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Today is your day</p>
+        <h1 class="hero-name">Merub</h1>
+        <p class="hero-quote">"You are every reason, every hope, and every dream I've ever had."</p>
+        <button class="pill-btn" onclick="App.go(1)">Open your gift &rarr;</button>
+      </div>
+      <canvas id="hero-particles"></canvas>
+    </section>
+
+    <!-- SESSION 1: PHOTOS -->
+    <section class="session" id="s1-photos">
+      <div class="section-header">
+        <p class="eyebrow">A love letter in photos</p>
+        <h2>You, always.</h2>
+      </div>
+      <div id="photo-gallery"></div>
+      <div class="nav-arrows">
+        <button class="arrow-btn" onclick="App.go(0)">&#8592;</button>
+        <button class="arrow-btn" onclick="App.go(2)">&#8594;</button>
+      </div>
+    </section>
+
+    <!-- SESSION 2: SONGS -->
+    <section class="session" id="s2-songs">
+      <div class="section-header">
+        <p class="eyebrow">Songs that remind me of you</p>
+        <h2>Play one.</h2>
+      </div>
+      <div id="song-list"></div>
+      <div class="nav-arrows">
+        <button class="arrow-btn" onclick="App.go(1)">&#8592;</button>
+        <button class="arrow-btn" onclick="App.go(3)">&#8594;</button>
+      </div>
+    </section>
+
+    <!-- SESSION 3: RADIO -->
+    <section class="session" id="s3-radio">
+      <div class="section-header">
+        <p class="eyebrow">Tune in</p>
+        <h2>Our Radio.</h2>
+      </div>
+      <div id="radio-widget"></div>
+      <div class="nav-arrows">
+        <button class="arrow-btn" onclick="App.go(2)">&#8592;</button>
+        <button class="arrow-btn" onclick="App.go(4)">&#8594;</button>
+      </div>
+    </section>
+
+    <!-- SESSION 4: CAKE -->
+    <section class="session" id="s4-cake">
+      <div class="section-header">
+        <p class="eyebrow">Make a wish</p>
+        <h2>Happy Birthday, Merub.</h2>
+      </div>
+      <div id="cake-stage"></div>
+      <div class="nav-arrows">
+        <button class="arrow-btn" onclick="App.go(3)">&#8592;</button>
+      </div>
+    </section>
+
+  </div><!-- /#app -->
+
+  <!-- FIREWORKS OVERLAY (shown after cake) -->
+  <div id="fireworks-overlay">
+    <canvas id="fireworks-canvas"></canvas>
+    <div id="fireworks-text">
+      <h1>Happy Birthday</h1>
+      <p class="fw-name">Merub 🤍</p>
+      <p class="fw-sub">You deserve every star in the sky.</p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="s1-hero/hero.js"></script>
+  <script src="s2-photos/photos.js"></script>
+  <script src="s3-songs/songs.js"></script>
+  <script src="s4-radio/radio.js"></script>
+  <script src="s5-cake/cake.js"></script>
+
+</body>
+</html>
